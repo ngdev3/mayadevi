@@ -73,14 +73,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 //print_r($_SERVER['HTTP_HOST']); die;
-if( $_SERVER['SERVER_NAME'] == 'thecrindustries.com' || $_SERVER['SERVER_NAME'] == 'www.thecrindustries.com'){
+if( $_SERVER['SERVER_NAME'] == 'themayaindustries.in' || $_SERVER['SERVER_NAME'] == 'www.themayaindustries.in'){
 
 	$db['default'] = array(
 		'dsn'	=> '',
 		'hostname' => 'localhost',
-		'username' => 'u930296518_admin',
-		'password' => ']+ei1o5W',
-		'database' => 'u930296518_mykisandata',
+		'username' => 'u930296518_maya',
+		'password' => 'I9k]KJQ@X',
+		'database' => 'u930296518_maya',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,
