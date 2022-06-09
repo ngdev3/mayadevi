@@ -1,0 +1,195 @@
+<main class="main-content bgc-grey-100">
+                <div id="mainContent">
+                    <div class="container"  >
+                                <a onclick="printData()" id="back-btn" class="btn cur-p btn-primary pull-right" style="color:white">Print</a>
+                        <h4 class="c-grey-900 mT-10 mB-30 text-center" style="font-weight:900; text-decoration:underline">रोकड़ पर्चा</h4>
+                        <?php echo form_open_multipart('', array('class' => '', 'id' => 'teamForm')); ?>
+                        <div class="form-row">
+                                           
+                                           <div class="form-group col-md-4" style="height:67px">
+                                               <label for="inputEmail4">Search Report *</label>
+                                              <?php  
+                                              $old_date = $this->session->all_userdata("setParchaDate")['setParchaDate']; 
+                                              $middle = strtotime($old_date);             // returns bool(false)
+                                              
+                                              $new_date = date('d-m-Y', $middle);
+                                              
+                                              $name = @$result->search_name;
+                                              $postvalue = @$new_date;
+                                              // echo $postvalue; die;
+                                              echo form_input(array('id'=>'myInput','name' => 'search_name', 'maxlength'=>'25', 'class' => 'form-control', 'placeholder' => 'Search Report...', 'value' => !empty($postvalue) ? $postvalue : $name )); ?>
+                                              <label  class="error"><div class="help-block" style="color:red"> <?php echo form_error('search_name'); ?></div></label>
+                                           </div>
+                                           <div class="form-group col-md-1" style="margin-top: 27px;}">
+                                                   <button type="submit" class="btn btn-primary" id="search"> Search </button>
+                                                    
+                                           </div> 
+                                           </div> 
+                                           </form>
+                                           <?php if(!empty($jama)){?>
+                        <div class="container" id="printTable" style="text-align: center; border: 4px solid black;">
+                                              <div style="text-align:center;"><img width="50" height="50" src="https://i.pinimg.com/originals/df/7a/c3/df7ac32ca67a39a812bbe7b7b69f1a28.jpg" alt="" srcset=""></div>
+                            <div class="col-md-12">
+                                <div class="bgc-white bd bdrs-3 p-20 mB-20">
+
+                                    
+                                    <div class="container-fluid" style="border: 4px dashed black;">
+                                   
+  <h1 class="text-center" style="font-weight:500; font-size:20px; text-decoration:underline">दिनांक: <?php $old_date = $this->session->all_userdata("setParchaDate")['setParchaDate']; 
+			$middle = strtotime($old_date);             // returns bool(false)
+			
+            $new_date = date('d-m-Y', $middle);
+            echo $new_date;?></h1>
+  <div class="col-xs-1 text-center" style="margin:8px; display: flex;">
+    <div class="col-sm-9 col-md-6 col-lg-6 text-center;" style="border: 2px solid; border-left: none;border-top: none;border-bottom: none; width: 50%">
+      <p class="text-center" style="font-weight:900; ; font-size:20px; text-decoration:underline">जमा</p>
+        <!-- <div class="row">
+        
+    </div> -->
+           <?php  if (!empty($naam)) { $sums = 0; foreach($naam as $key=>$val){?>
+    <div class="grid-container">
+
+    <div class="grid-child purple">
+                <?php $sums += $val->karch_amount; echo $val->karch_amount;?>
+    </div>
+
+    <div class="grid-child green">
+                <?php echo $val->account_name;?><i style="padding:8px;" class="c-red-500 ti-trash" onclick='deleteSingle(<?php echo $val->rokad_id; ?>)'></i>
+    </div>
+  
+    </div>
+        <?php }
+    }?>
+<style>
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+</style>
+    <div style="text-align:left; margin-left:20px">
+   <hr style="border: 1px solid black">
+   <span class="margin-left-short"> <?php echo @$sums; ?> </span>
+    <hr style="border: 1px solid black">
+    </div>
+    </div>
+    <div class="col-6" style="width:50%">
+      <p class="text-center" style="font-weight:900; font-size:20px; text-decoration:underline">नाम</p>
+      <?php if(!empty($jama)) { $sum = 0; foreach($jama as $key=>$val){?>
+        <div class="grid-container">
+
+<div class="grid-child purple">
+            <?php $sum += $val->karch_amount; echo $val->karch_amount;?>
+</div>
+
+<div class="grid-child green">
+            <?php echo $val->account_name;?><i  style="padding: 10px;" class="c-red-500 ti-trash" onclick='deleteSingle(<?php echo $val->rokad_id; ?>)'></i>
+</div>
+
+</div>
+
+<style>
+.margin-left-short{
+    margin-left: 40px;
+    font-weight: bolder;
+}
+</style>
+
+     
+        <?php } }?>
+   <div style="text-align:left; margin-left:20px">
+   <hr style="border: 1px solid black">
+   <span class="margin-left-short"> <?php echo @$sum; ?> </span>
+    <hr style="border: 1px solid black">
+    </div>
+    </div>
+  </div>
+</div>  
+<div style="text-align:center;color:green;font-size:30px"><?php echo "शेष रोकड़ पर्चा: ".(@$sums-@$sum); ?></div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php }else{?>
+                        <h1 style="text-align:center">रोकड़ पर्चा अभी उपलब्ध नहीं है | </h1>
+                        <marquee behavior="" direction=""><h1 >कृपया इंतजार करें या एडमिनिस्ट्रेशन से बात करें </h1></marquee>
+                        <?php }?>
+                    </div>
+                </div>
+            </main>
+            <script type="text/javascript"> 
+              $( function() {
+   // alert(new Date());
+    $( "#myInput" ).datepicker({ 
+        
+        dateFormat: "dd-mm-yy",
+        "setDate": '01-11-2020'     
+        });
+  } );
+
+
+
+   function printData()
+{
+   var divToPrint=document.getElementById("printTable");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+  // newWin.close();
+}
+   
+ 
+function deleteSingle(a,b){
+    var txt;
+    console.log(a,b)
+var r = confirm("Are you Sure !!!");
+if (r == true) {
+    deleteSinglevalue(a)
+} else {
+  txt = "Thank God";
+}
+}
+function deleteSinglevalue(a){
+    
+$.ajax({
+        url: "<?php echo base_url(); ?>admin/report/deleteMyEntry",
+        type: "POST",
+        dataType: 'json',
+        data:{'deleteEntry':a},
+        success: function (a) {
+            console.log(a)
+            if(a){ $('#search').click();}else{
+                alert("Not able to delete")
+            }
+        },
+        error: function () {
+            alert("Error");
+        }
+        });
+}
+ </script>
+
+ <style id="table_style" type="text/css">
+    body
+    {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+    table
+    {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+    }
+    table th
+    {
+        background-color: #F7F7F7;
+        color: #333;
+        font-weight: bold;
+    }
+    table th, table td
+    {
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+</style>
+            
+			
