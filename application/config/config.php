@@ -25,12 +25,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 // print_r($_SERVER);
 // die;
-if( $_SERVER['SERVER_NAME'] == 'thecrindustries.com' || $_SERVER['SERVER_NAME'] == 'www.thecrindustries.com'){
+if( $_SERVER['SERVER_NAME'] == 'themayaindustries.in' || $_SERVER['SERVER_NAME'] == 'www.themayaindustries.in'){
     
     $config['base_url'] = 'https://'.$_SERVER['HTTP_HOST'];
 }else{
     
-    $config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/thealternativeaccountp';
+    $config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/mayaindustries';
 }
 //$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/'; //rate-It
  $config['sendmailCI']  =   FALSE;
