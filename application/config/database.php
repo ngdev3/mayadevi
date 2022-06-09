@@ -72,7 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-print_r($_SERVER['HTTP_HOST']); die;
+
 if( $_SERVER['SERVER_NAME'] == 'themayaindustries.in' || $_SERVER['SERVER_NAME'] == 'www.themayaindustries.in'){
 
 	$db['default'] = array(
