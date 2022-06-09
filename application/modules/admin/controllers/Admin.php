@@ -36,8 +36,7 @@ class Admin extends CI_Controller {
     public function index()
     
 	{
-        echo "39";
-        die;
+       
         redirect(base_url('admin/auth/login'));               
             
 	}
