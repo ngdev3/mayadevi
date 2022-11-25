@@ -95,7 +95,8 @@ class Dashboard extends MY_Controller {
     //   //  curl_close($curlSession);
     //     die;
 
-     
+
+
         $data['total_weight']   = $this->Auth_mod->RealTimeDataCount()['billing'];
         $data['FinalAmountPaddy']   = $this->Auth_mod->RealTimeDataCount()['FinalAmountPaddy'];
         $data['TotalKatti']   = $this->Auth_mod->RealTimeDataCount()['TotalKatti'];
@@ -103,22 +104,18 @@ class Dashboard extends MY_Controller {
         $data['RealTimeDataCount']   = $this->Auth_mod->RealTimeDataCount();
         
         $totallength = count($data['RealTimeDataCount']['first']);
-      //  pr($this->Auth_mod->RealTimeDataCount()); die;
-      $data['ActiveParcha'] = 0;
-      $data['todays_KisanVahi'] = 0;
-      $data['total_runningcampaigns']   = 50;
         if($totallength > 0){
           $x = 0;
           for($i=0;$i<@count($totallength);$i++){
             $x += (($data['RealTimeDataCount']['first'])[$i]->totalQuant);
           }
           $data['totalrealtimeCenterSum'] = $x;
-          $data['ActiveParcha']   = $this->Auth_mod->RealTimeActiveParcha();
-          $data['todays_KisanVahi']   = $this->Auth_mod->todays_KisanVahi();
-          $data['total_runningcampaigns']   = 50;
         }
        
         
+       $data['ActiveParcha']   = $this->Auth_mod->RealTimeActiveParcha();
+       $data['todays_KisanVahi']   = $this->Auth_mod->todays_KisanVahi();
+       $data['total_runningcampaigns']   = 50;
        $data['page'] = 'dashboard/site_dashboard';
         $data['title'] = 'Track (The Rest Accounting Key) || Dashboard';
         $this->load->view('layout',$data);
@@ -346,7 +343,7 @@ class Dashboard extends MY_Controller {
                  $mail->Subject = 'sss';
                  $mail->Body = 'sdfsdf';
                  $mail->AddAddress($emailTo, $emailToName);
-                 $mail->SetFrom('admin@thecrindustries.com', 'Maya Industries');
+                 $mail->SetFrom('admin@thecrindustries.com', 'C R Industries');
                  $mail->Subject = $subject;
                  $mail->AltBody = $body;
                  $mail->MsgHTML($body);

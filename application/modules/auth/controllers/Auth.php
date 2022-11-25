@@ -598,7 +598,7 @@ class Auth extends CI_Controller {
                  $mail->Subject = 'sss';
                  $mail->Body = 'sdfsdf';
                  $mail->AddAddress($emailTo, $emailToName);
-                 $mail->SetFrom('admin@thecrindustries.com', 'Maya Industries');
+                 $mail->SetFrom('admin@thecrindustries.com', 'C R Industries');
                  $mail->Subject = $subject;
                  $mail->AltBody = $body;
                  $mail->MsgHTML($body);

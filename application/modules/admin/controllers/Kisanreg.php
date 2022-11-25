@@ -136,6 +136,11 @@ class Kisanreg extends CI_Controller {
             if ($this->form_validation->run() == FALSE) {
             } else {
 			
+				$middle = strtotime($_POST['reg_date']);             // returns bool(false)
+				$new_date = date('Y-m-d', $middle);
+
+				$isFoundAccountDetail = explode('_',$_POST['account_name']);
+				// $naam = explode('_',$_POST['naam']);
 
 				$userdata = array(
 					'reg_date'=>$new_date,
@@ -207,7 +212,7 @@ class Kisanreg extends CI_Controller {
         
        // $d = array('id' => 'city_id', 'name' => 'name', 'status' => 'status');
         $citydata = $this->Kisanreg_mod->get_Billing_data(); 
-		// pr(count($citydata));
+		// pr(($citydata));
 		// die;
         //   die;     
         $data   =   array();
@@ -225,16 +230,20 @@ class Kisanreg extends CI_Controller {
 				$nestedData[]   =   $row["Farmer_ID"];
 				$nestedData[]   =   $row["Farmer_name"];
 				$nestedData[]   =   $row["Quantity"];
-				$nestedData[]   =   $row["reg_date"];
-                $nestedData[]   =   $row["dob"];
-				$nestedData[]   =   $row["account_name"];
+				$nestedData[]   =   $row["left_quantity"];
+				$nestedData[]   =   $row["CenterName"].'_'.$row['cname'];
 				$nestedData[]   =   $row["status"];
-				// $nestedData[]   =   $row["contact_person_number"];
+                // $nestedData[]   =   $row["dob"];
+				$nestedData[]   =   $row["account_name"].'_'.$row['account_no'];
+				// $nestedData[]   =   $row["status"];
+				$nestedData[]   =   $row["aadhar_card"];
+				$nestedData[]   =   $row["nominee_name"];
                 // $nestedData[]   =   $row["site_name"];
                 // $nestedData[]   =   $row["gst_amount"];
 
 				$nestedData[]   =   $this->load->view("regkisanvahi/_action", array("row" => $row), true);
 				// pr($row); die;
+				
                 $data[]         =   $nestedData;
             }
         }

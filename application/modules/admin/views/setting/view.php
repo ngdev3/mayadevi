@@ -412,7 +412,7 @@ if($('#center_type').val() == ''){
           }else if (a.CenterName == 'reva'){
             $('#CenterName').val('Reva')
           }else if (a.CenterName == 'upss'){
-            $('#CenterName').val('UPSS')
+            $('#CenterName').val('UPSS')     
           }else{
             $('#CenterName').val('No_Detail')
           }

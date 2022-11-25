@@ -1210,6 +1210,7 @@ function publisher_mapping_deatils($id){
 
 function get_all_financial_year(){
     $this->db->select("*");
+    $this->db->where('status !=','Delete');
     $this->db->from("aa_template");
     $query = $this->db->get();
         if ($query->num_rows() > 0) {
@@ -1255,6 +1256,7 @@ function get_all_financial_year(){
 
     function account_name(){
         $this->db->select('*');
+        $this->db->where('status !=','Delete');
         $query = $this->db->get('aa_account_name')->result();
       //  pr($query); die;
         return $query;
@@ -1262,14 +1264,16 @@ function get_all_financial_year(){
 
     function getCurrentDataForExpenses(){
         $this->db->select('*');
+        $this->db->where('status !=','Delete');
         $query = $this->db->get('aa_account_name')->result();
-       pr($query); die;
+      //pr($query); die;
         return $query;
     }
     
     function add_fy($data){
         
       //  $this->db->where('template_id',$data['template_id']);
+
         $this->db->update('aa_template',array('status'=>'Inactive'));
 
         $this->db->where('template_id',$data['template_id']);

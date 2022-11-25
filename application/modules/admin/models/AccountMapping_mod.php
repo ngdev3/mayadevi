@@ -1153,6 +1153,7 @@ function publisher_mapping_deatils($id){
 }
 function center_list(){
     $this->db->select("*");
+    $this->db->where('status ','Active');
     $this->db->from("aa_center_name");
     $query = $this->db->get();
         if ($query->num_rows() > 0) {
@@ -1195,8 +1196,8 @@ function origin_type(){
         }
 
         function add_Kisan_Vahi(){
-        //    pr($_POST);
-		// 		die;
+            
+          
                 $isFoundAccountDetail = explode('_',$_POST['account_name']);
                 $up = $isFoundAccountDetail[1];
                 if(empty($_POST['checknow'])){
@@ -1223,6 +1224,23 @@ function origin_type(){
                         'product_type' =>fy()->product_type,
                         
                     );
+                 
+                    $this->db->select("*");
+                    $this->db->from("reg_kisanvahidata");
+                    $this->db->where('Farmer_ID', $_POST['farmer_id']);
+                    $query = $this->db->get();
+                    $query = $query->row();
+                    if ($query->left_quantity == '0.00') {
+                        $quantity = ($query->Quantity) - ($_POST['quantity']);
+                    } else {
+                        $quantity = ($query->left_quantity) - ($_POST['quantity']);
+                    }
+                    $userdatas = array(
+                        'left_quantity' => $quantity,
+                    );
+
+                    $this->db->update('reg_kisanvahidata', $userdatas, array('Farmer_ID' => $_POST['farmer_id']));
+
                     $this->db->insert('kisanvahidata', $userdata);
                     $last_id = $this->db->insert_id();
                 }else{

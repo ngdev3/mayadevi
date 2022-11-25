@@ -44,10 +44,12 @@ $QUERY_STRING = $_SERVER['QUERY_STRING'];
                             <th>Farmer Id</th>
                             <th>Farmer Name</th>
                             <th>Quantity</th>
-                            <th>Reg Date</th>
-                            <th>DOB</th>
-                            <th>Account Name</th>
+                            <th>Left Quantity</th>
+                            <th>Center Name</th>
                             <th>Status</th>
+                            <th>Account Name</th>
+                            <th>Aadhar Card</th>
+                            <th>Nominee Name</th>
                             <th>Action</th>
                             </tr>
                         
@@ -115,6 +117,10 @@ $QUERY_STRING = $_SERVER['QUERY_STRING'];
                 "orderable": true
             }, {
                 "orderable": true
+            }, {
+                "orderable": true
+            },{
+                "orderable": true
             },{
                 "orderable": true
             }
@@ -140,6 +146,8 @@ $QUERY_STRING = $_SERVER['QUERY_STRING'];
             {"targets": [6], "orderable": false, "searchable": false},
             {"targets": [7], "orderable": false, "searchable": false},
             {"targets": [8], "orderable": false, "searchable": false},
+            {"targets": [9], "orderable": false, "searchable": false},
+            {"targets": [10], "orderable": false, "searchable": false},
         ],
         "ajax": {
             url: "<?php echo base_url(); ?>admin/kisanreg/view_all?<?php echo $QUERY_STRING; ?>", // json datasource

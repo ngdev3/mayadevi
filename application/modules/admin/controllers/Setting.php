@@ -329,7 +329,9 @@ class Setting extends CI_Controller {
 				'status' =>'Active',
 			);
 			$data['fy']= $this->Setting_mod->add_fy($userdata);
-			set_flashdata('success', 'Financial Year Loaded Successfully');
+			set_flashdata('success', 'Financial Year Loaded Successfully !! Login Again');
+			$this->session->sess_destroy();
+			redirect(base_url().'admin/auth/login');
 		}
         $data['page'] = 'setting/view';
         $data['title'] = "Track (The Rest Accounting Key) || Billing View";

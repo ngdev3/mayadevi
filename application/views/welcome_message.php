@@ -16,20 +16,20 @@
 				<td align="right">Mob. 7398703084, 9415777518</td>
 			</tr>
 			<tr style="font-size: 12px;font-weight: bold;">
-				<td> GSTIN : 09AAPFC4401L1Z9</td>
+				<td> GSTIN : 09ABUFM1264B1Z6</td>
 				<td align="right">8800210190, 8887905070</td>
 			</tr>
 			<tr style="font-size: 12px;font-weight: bold;">
-				<td>FSSAI No. 12721069000154</td>
-				<td align="right">Email: crindustries2020@gmail.com</td>
+				<td>FSSAI No. 12722069000568</td>
+				<td align="right">Email: mayaindustries2022@gmail.com</td>
 			</tr>
 			<tr style="font-size: 12px;font-weight: bold;">
-				<td>Mandi Samiti License: L/2020/217/49146048</td>
+				<td>Mandi Samiti License:  L/2022/217/64665762</td>
 				<td align="right">State Code : 09</td>
 				
 			</tr>
 			<tr style="font-size: 12px;font-weight: bold;">
-				<td>Rice Milling License: L/2020/217/77877834</td>
+				<td>Rice Milling License:  L/2022/217/73479004</td>
 				<td align="right" style="text-decoration:underline; color:blue">Original for Receipient</td>
 			</tr>
 			<tr style="font-size: 12px;font-weight: bold;">
@@ -41,7 +41,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0">
 						<tbody>
 							<tr>
-								<td height="" style="font-size:25px; color:#4349c4 ; font-weight:bold; font-family: 'Muli', sans-serif;" align="center">C. R. INDUSTRIES</td>
+								<td height="" style="font-size:25px; color:#4349c4 ; font-weight:bold; font-family: 'Muli', sans-serif;" align="center">MAYA INDUSTRIES</td>
 							</tr>
 							<tr>
 								<td align="center" style=" padding:2px; font-size:10px; color:#000;  font-weight:bold; font-family: 'Muli', sans-serif;">Moh. Mahamand Mahua Tola Chungi, Shahabad ( Hardoi ) Uttar Pradesh - 241124 </td>
@@ -188,9 +188,9 @@
 						</tr>
 			</tr>
 			<tr>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">Name: Axis Bank</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">Name: PNBBank</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border:0;font-weight:bold; font-size:13px;" align="center"></td>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">Name: BOB Bank</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">Name: PNB Bank</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px;" align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px; " align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; font-weight:BOLD; font-size:10px;" align="center">SGST @ <?php echo $invoice_data['sgst']?>%</td>
@@ -198,18 +198,18 @@
 			</tr>
 			</tr>
 			<tr>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">A/C No.: 921020002720562</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">A/C No.: 1002108700000870</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border:0;font-weight:bold; font-size:13px;" align="center"></td>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">A/C No.: 32140200000336</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">A/C No.: 1002108700000870</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px;" align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px; " align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; font-weight:BOLD; font-size:10px;" align="center">IGST @ <?php echo $invoice_data['igst']?>%</td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:13px;" align="center"><?php echo $invoice_data['igst_amount']?></td>
 			</tr>
 			<tr>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">IFSC Code:- UTIB0002701</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">IFSC Code:- PUNB0100210</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border:0;font-weight:bold; font-size:13px;" align="center"></td>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">IFSC Code:- BARB0SHADOI</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">IFSC Code:- PUNB0100210</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px;" align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px; " align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; font-weight:BOLD; font-size:10px;" align="center">Tax Amount : GST</td>
@@ -323,20 +323,20 @@
 				<td align="right">Mob. 7398703084, 9415777518</td>
 			</tr>
 			<tr style="font-size: 12px;font-weight: bold;">
-				<td> GSTIN : 09AAPFC4401L1Z9</td>
+				<td> GSTIN : 09ABUFM1264B1Z6</td>
 				<td align="right">8800210190, 8887905070</td>
 			</tr>
 			<tr style="font-size: 12px;font-weight: bold;">
-				<td>FSSAI No. 12721069000154</td>
-				<td align="right">Email: crindustries2020@gmail.com</td>
+				<td>FSSAI No. 12722069000568</td>
+				<td align="right">Email: mayaindustries2022@gmail.com</td>
 			</tr>
 			<tr style="font-size: 12px;font-weight: bold;">
-				<td>Mandi Samiti License: L/2020/217/49146048</td>
+				<td>Mandi Samiti License:  L/2022/217/64665762</td>
 				<td align="right">State Code : 09</td>
 				
 			</tr>
 			<tr style="font-size: 12px;font-weight: bold;">
-				<td>Rice Milling License: L/2020/217/77877834</td>
+				<td>Rice Milling License:  L/2022/217/73479004</td>
 				<td align="right" style="text-decoration:underline; color:red">Duplicate for Transporter/Supplier</td>
 				
 			</tr>
@@ -349,7 +349,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0">
 						<tbody>
 							<tr>
-								<td height="" style="font-size:25px; color:#4349c4 ; font-weight:bold; font-family: 'Muli', sans-serif;" align="center">C. R. INDUSTRIES</td>
+								<td height="" style="font-size:25px; color:#4349c4 ; font-weight:bold; font-family: 'Muli', sans-serif;" align="center">MAYA INDUSTRIES</td>
 							</tr>
 							<tr>
 								<td align="center" style=" padding:2px; font-size:10px; color:#000;  font-weight:bold; font-family: 'Muli', sans-serif;">Moh. Mahamand Mahua Tola Chungi, Shahabad ( Hardoi ) Uttar Pradesh - 241124 </td>
@@ -495,9 +495,9 @@
 						</tr>
 			</tr>
 			<tr>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">Name: Axis Bank</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">Name: PNBBank</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border:0;font-weight:bold; font-size:13px;" align="center"></td>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">Name: BOB Bank</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">Name: PNB Bank</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px;" align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px; " align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; font-weight:BOLD; font-size:10px;" align="center">SGST @ <?php echo $invoice_data['sgst']?>%</td>
@@ -505,18 +505,18 @@
 			</tr>
 			</tr>
 			<tr>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">A/C No.: 921020002720562</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">A/C No.: 1002108700000870</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border:0;font-weight:bold; font-size:13px;" align="center"></td>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">A/C No.: 32140200000336</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">A/C No.: 1002108700000870</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px;" align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px; " align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; font-weight:BOLD; font-size:10px;" align="center">IGST @ <?php echo $invoice_data['igst']?>%</td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:13px;" align="center"><?php echo $invoice_data['igst_amount']?></td>
 			</tr>
 			<tr>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">IFSC Code:- UTIB0002701</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">IFSC Code:- PUNB0100210</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border:0;font-weight:bold; font-size:13px;" align="center"></td>
-				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">IFSC Code:- BARB0SHADOI</td>
+				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:bold; font-size:10px;" align="center">IFSC Code:- PUNB0100210</td>
 				<td style="width: fit-content; font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px;" align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; border: 0;font-weight:300; font-size:13px; " align="center"></td>
 				<td style="width: fit-content;font-family:Verdana, Geneva, sans-serif; font-weight:BOLD; font-size:10px;" align="center">Tax Amount : GST</td>

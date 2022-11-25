@@ -271,8 +271,10 @@ class Kisanreg_mod extends CI_Model {
 	function count_Billing_data() {
         $requestData = $this->input->post(null, true);
         // die;
-        $this->db->select("ab.*, acn.name as account_name");
+        $this->db->select("ab.*, acn.name as account_name, kvd.CenterName, ab.Farmer_name");
         $this->db->join('aa_account_name as acn', 'acn.account_id  = ab.account_no ','left');
+        $this->db->join('kisanvahidata as kvd', 'kvd.Farmer_ID  = ab.Farmer_ID ','left');
+
         $this->db->where("ab.status !=",'Dead');
         if (isset($_GET['status'])) {
            
@@ -281,7 +283,8 @@ class Kisanreg_mod extends CI_Model {
 		
         if (!empty($requestData['search']['value'])) {
             $search_val = $requestData['search']['value'];
-            $this->db->like("(CONCAT(acn.name,' ',Farmer_name,' ',Farmer_ID))", $search_val); 
+            $this->db->like("(CONCAT(acn.name,' ',ab.Farmer_name,' ',ab.Farmer_ID,' ',aadhar_card,' ',ab.status,' ',nominee_name))", $search_val); 
+
         }
 		
        
@@ -327,8 +330,10 @@ class Kisanreg_mod extends CI_Model {
             7 => 'status',
         );
        
-        $this->db->select("ab.*, acn.name as account_name");
+        $this->db->select("ab.*, acn.name as account_name, kvd.CenterName,c_data.name as cname ");
         $this->db->join('aa_account_name as acn', 'acn.account_id  = ab.account_no ','left');
+        $this->db->join('kisanvahidata as kvd', 'kvd.Farmer_ID  = ab.Farmer_ID ','left');
+        $this->db->join('aa_center_name as c_data', 'c_data.center_id  = kvd.CenterName ','left');
         $this->db->where("ab.status !=",'Dead');
         $this->db->from("reg_kisanvahidata as ab");
         if (isset($_GET['status'])) {
@@ -338,7 +343,7 @@ class Kisanreg_mod extends CI_Model {
          
         if (!empty($requestData['search']['value'])) {
             $search_val = $requestData['search']['value']; 
-            $this->db->like("(CONCAT(acn.name,' ',Farmer_name,' ',Farmer_ID))", $search_val); 
+            $this->db->like("(CONCAT(acn.name,' ',ab.Farmer_name,' ',ab.Farmer_ID,' ',aadhar_card,' ',ab.status,' ',nominee_name))", $search_val); 
             }
         
         if (@$requestData['order'][0]['column'] && @$requestData['order'][0]['dir']) {

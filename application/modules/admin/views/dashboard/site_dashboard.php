@@ -13,23 +13,44 @@
                         <div class="col-1">
                            <input type="" id="datepicker" name="activeKishan" class="form-control" placeholder="Latest KisanVahi">
                         </div>
-                        <div class="col-2 " id="total_quant" style="font-size: 23px; font-weight: 600; color:blue"></div>
-                        <div class="col-2 " style="font-size: 23px; font-weight: 600; color:green">Total Kishan Vahi <?php echo number_format($totalrealtimeCenterSum,2); ?></div>
-                        <div class="col-2  " style="font-size: 23px; font-weight: 600; color:orange">Total Lot <?php 
-                        $cal = $totalrealtimeCenterSum;
+                        
+                        <div class="col-2 " id="total_quant" style="font-size: 13px; font-weight: 600; color:blue"></div>
+                        <div class="col-2 " style="font-size: 13px; font-weight: 600; color:green">Total Kishan Vahi <?php echo number_format(@$totalrealtimeCenterSum,2); ?></div>
+                        <div class="col-2  " style="font-size: 13px; font-weight: 600; color:orange">Total Lot <?php 
+                        $cal = @$totalrealtimeCenterSum;
                         $cal = ($cal*67)/100;
                         $cal = ($cal/290);
                         echo number_format($cal,2);
                         ?></div>
-                        <div class="col-2 " id="total_quant" style="font-size: 23px; font-weight: 600; color:black">Accepted Lot: <?php echo number_format($totalrealtimeCenterSum,2); ?></div>
-                        <div class="col-2  " id="total_quant" style="font-size: 23px; font-weight: 600; color:red">Rejected Lot: <?php echo number_format($totalrealtimeCenterSum,2); ?></div>
+                        <div class="col-2 " id="total_quant" style="font-size: 13px; font-weight: 600; color:black">Accepted Lot: <?php echo number_format(@$totalrealtimeCenterSum,2); ?></div>
+                        <div class="col-2  " id="total_quant" style="font-size: 13px; font-weight: 600; color:red">Rejected Lot: <?php echo number_format(@$totalrealtimeCenterSum,2); ?></div>
                      </div>
                   </div>
-                  
+   <hr>
+                  <div class="container">
+                     <div class="row">
+
+                  <div style="display: inline-flex;">
+                  <div class="col-4">
                   <a href="javascript:void(0)" style="text-decoration:underline">Last Active Parcha: <?php echo $ActiveParcha['activeParcha']; ?></a>
-                  <a href="<?php echo base_url('/admin/dashboard/mydata')?>" style="text-decoration:underline">Auto Sync</a>
+
+                  </div>
+                  
+                  <div class="col-4">
+                  <a href="<?php echo base_url('/admin/dashboard/mydata')?>"><button type="button" class="btn btn-success  btn-lg "> Auto Sync </button></a>
+
+                  </div>
+                  
+                  <div class="col-4">
+                  <a href="https://pages.razorpay.com/pl_K3QkvyJwwfFFeP/view" target="_blank"><button type="button" class="btn btn-danger  btn-lg "> Pay Now </button></a>
+
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+
                 
-               </div>
+                <hr>
                <div id="mainContent">
                   <div class="row gap-20 masonry pos-r">
                      <div class="masonry-sizer col-md-6"></div>
