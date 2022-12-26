@@ -1221,7 +1221,7 @@ function get_datetime_by_defined_timezone($datetime,$timezone = NULL)
 {
     if($timezone == '')
     {
-        $timezone_dat = fieldByCondition("users",array('id'=>  currentuserinfo()->id),"timezone"); 
+        //$timezone_dat = fieldByCondition("users",array('id'=>  currentuserinfo()->id),"timezone"); 
         if(!empty($timezone_dat)){$timezone = $timezone_dat->timezone;}else{$timezone   =   date_default_timezone_get();}
         $date = new DateTime($datetime, new DateTimeZone(date_default_timezone_get()));
     }else{
@@ -1246,7 +1246,7 @@ function convert_datetime_by_defined_timezone($datetime,$timezone_from,$timezone
 
 function get_default_timezone_of_user()
 {
-    $timezone_dat = fieldByCondition("users",array('id'=>  currentuserinfo()->id),"timezone"); 
+   // $timezone_dat = fieldByCondition("users",array('id'=>  currentuserinfo()->id),"timezone"); 
     if(!empty($timezone_dat))
     {
         $timezone = $timezone_dat->timezone;
@@ -1776,6 +1776,23 @@ if (!function_exists('get_role_group')) {
 
 }
 
+
+
+if (!function_exists('get_logical_data')) {
+
+    function get_logical_data() {
+        $CI = &get_instance();
+        $CI->db->select("status");
+        $query = $CI->db->get('service');
+        if ($query->row()) {
+            $res = $query->row();
+            return $res;
+        }
+        return false;
+		
+    }
+
+}
 
 
 
