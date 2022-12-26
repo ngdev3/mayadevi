@@ -9,7 +9,7 @@ if(!empty($_SESSION['user_type'])){
 		
 ?>
 <ul class="sidebar-menu scrollable pos-r">
-
+<?php if(get_logical_data()->status){?>
 <li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'account_name'){echo 'open';} ?>">
 		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">खाता नाम</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
@@ -18,6 +18,24 @@ if(!empty($_SESSION['user_type'])){
 		</ul>
 	</li>
 
+	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'driver_module'){echo 'open';} ?>">
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">FCI ड्राइवर </span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<ul class="dropdown-menu">
+			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'driver_module'&& $uri3 == 'listing'){echo 'btn_active';} ?>" href="<?= base_url('admin/driver_module/listing')?>">ड्राइवर लिस्टिंग</a></li>
+		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'driver_module'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/driver_module/add')?>">ड्राइवर जोड़ें</a></li>
+		</ul>
+	</li>
+
+
+	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'truck_module'){echo 'open';} ?>">
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">FCI गाड़ी </span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<ul class="dropdown-menu">
+			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'truck_module'&& $uri3 == 'listing'){echo 'btn_active';} ?>" href="<?= base_url('admin/truck_module/listing')?>">गाड़ी लिस्टिंग</a></li>
+		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'truck_module'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/truck_module/add')?>">गाड़ी जोड़ें</a></li>
+		</ul>
+</li>
+
+	<?php }?>
 <li class="nav-item mT-30 hide"><a class="sidebar-link" href="<?= base_url('admin/dashboard')?>" default><span class="icon-holder"><i class="c-blue-500 ti-home"></i> </span><span class="title">Dashboard</span></a></li>
 	<li class="nav-item dropdown hide <?php if($uri1 == 'master'){echo 'open';} ?>">
 		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">Masters</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
@@ -33,6 +51,7 @@ if(!empty($_SESSION['user_type'])){
 		
 		</ul>
 	</li>
+	<?php if(get_logical_data()->status){?>
 
 	<li class="nav-item dropdown <?php if($uri1 == 'admin' && $uri2 == 'account'){echo 'open';} ?>">
 		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">खर्च & जमा</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
@@ -50,20 +69,24 @@ if(!empty($_SESSION['user_type'])){
 		
 		</ul>
 	</li>
+	<?php }?>
+
 	</li>
 	<li class="nav-item dropdown <?php if($uri1 == 'admin' && $uri2 == 'report'){echo 'open';} ?>">
 		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">रिपोर्ट</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'report'&& $uri3 == 'search'){echo 'btn_active';} ?>" href="<?= base_url('admin/report/search')?>">खाता नाम</a></li>
+		<?php if(get_logical_data()->status){?>
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'report'&& $uri3 == 'byaccount_name'){echo 'btn_active';} ?>" href="<?= base_url('admin/report/byaccount_name')?>">खाता नाम सूची</a></li>
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'report'&& $uri3 == 'rokad_parcha'){echo 'btn_active';} ?>" href="<?= base_url('admin/report/rokad_parcha')?>">रोकड़ पर्चा</a></li>
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'report'&& $uri3 == 'kishanVahi_parcha'){echo 'btn_active';} ?>" href="<?= base_url('admin/report/kishanVahi_parcha')?>">किसान वही पर्चा</a></li>
+		<?php } ?>
 		<!-- <li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'report'&& $uri3 == 'searchbycondition'){echo 'btn_active';} ?>" href="<?= base_url('admin/report/searchbycondition')?>">Search By Condition</a></li> -->
 		
 		</ul>
 	</li>
 	
-	
+	<?php if(get_logical_data()->status){?>
 	<ul class="sidebar-menu scrollable pos-r">
 	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'accountMapping'){echo 'open';} ?>">
 		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">मैपिंग किसान बही</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
@@ -72,11 +95,11 @@ if(!empty($_SESSION['user_type'])){
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'accountMapping'&& $uri3 == 'add_Kisan_Vahi'){echo 'btn_active';} ?>" href="<?= base_url('admin/accountMapping/add_Kisan_Vahi')?>">ऐड किसान वही</a></li>
 		</ul>
 	</li>
-
+		<?php }?>
 	
 
 	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'invoice'){echo 'open';} ?>">
-		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">बिलिंग Bill Of Supply</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">बिल ऑॅफ सप्लाई</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
 			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'invoice'&& $uri3 == 'listing'){echo 'btn_active';} ?>" href="<?= base_url('admin/invoice/listing')?>">लिस्टिंग</a></li>
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'invoice'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/invoice/add')?>">जोड़ें</a></li>
@@ -84,16 +107,17 @@ if(!empty($_SESSION['user_type'])){
 	</li>
 
 	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'taxinvoice'){echo 'open';} ?>">
-		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">Tax Invoice</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">टैक्स इनवॉइस</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
 			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'taxinvoice'&& $uri3 == 'listing'){echo 'btn_active';} ?>" href="<?= base_url('admin/taxinvoice/listing')?>">लिस्टिंग</a></li>
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'taxinvoice'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/taxinvoice/add')?>">जोड़ें</a></li>
 		</ul>
 	</li>
 	
+	<?php if(get_logical_data()->status){?>
 	
 	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'Kisanreg'){echo 'open';} ?>">
-		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">किसान वाही पंजीकरण</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-pencil-alt"></i> </span><span class="title">किसान वाही पंजीकरण</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
 			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'Kisanreg'&& $uri3 == 'listing'){echo 'btn_active';} ?>" href="<?= base_url('admin/Kisanreg/listing')?>">किसान वाही लिस्टिंग</a></li>
 			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'Kisanreg'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/Kisanreg/add')?>">किसान वाही जोड़ें</a></li>
@@ -101,8 +125,25 @@ if(!empty($_SESSION['user_type'])){
 		</ul>
 	</li>
 
+	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'lot_system'){echo 'open';} ?>">
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-pencil-alt"></i> </span><span class="title">लॉट सिस्टम( Lot System )</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<ul class="dropdown-menu">
+			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'lot_system'&& $uri3 == 'listing'){echo 'btn_active';} ?>" href="<?= base_url('admin/lot_system/listing')?>">लॉट सिस्टम लिस्टिंग</a></li>
+			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'lot_system'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/lot_system/add')?>">लॉट सिस्टम जोड़ें</a></li>
+		</ul>
+	</li>
+
+	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'paddy_lot_system'){echo 'open';} ?>">
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-pencil-alt"></i> </span><span class="title">धान प्रेषण सिस्टम</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<ul class="dropdown-menu">
+			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'paddy_lot_system'&& $uri3 == 'listing'){echo 'btn_active';} ?>" href="<?= base_url('admin/paddy_lot_system/listing')?>">धान लॉट सिस्टम लिस्टिंग</a></li>
+			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'paddy_lot_system'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/paddy_lot_system/add')?>"> धान लॉट सिस्टम जोड़ें</a></li>
+		</ul>
+	</li>
+	<?php }?>
+
 	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'setting'){echo 'open';} ?>">
-		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">सेटिंग</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-settings"></i> </span><span class="title">सेटिंग</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'setting'&& $uri3 == 'change_fy'){echo 'btn_active';} ?>" href="<?= base_url('admin/setting/change_fy')?>">वित्तीय वर्ष बदलें</a></li>
 		</ul>
@@ -132,6 +173,11 @@ if(!empty($_SESSION['user_type'])){
 		
 ?>
 <ul class="sidebar-menu scrollable pos-r">
+	
+
+<?php if(get_logical_data()->status){?>
+	
+
 <li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'account_name'){echo 'open';} ?>">
 		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">खाता नाम</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
@@ -148,6 +194,9 @@ if(!empty($_SESSION['user_type'])){
 		
 		</ul>
 	</li>
+
+<?php } ?>
+
 <li class="nav-item dropdown <?php if($uri1 == 'admin' && $uri2 == 'report'){echo 'open';} ?>">
 		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">रिपोर्ट</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
@@ -161,7 +210,8 @@ if(!empty($_SESSION['user_type'])){
 		</ul>
 	</li>
 	
-	
+	<?php if(get_logical_data()->status){?>
+		
 
 	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'accountMapping'){echo 'open';} ?>">
 		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">मैपिंग किसान बही</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
@@ -170,9 +220,9 @@ if(!empty($_SESSION['user_type'])){
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'accountMapping'&& $uri3 == 'account_mapping'){echo 'btn_active';} ?>" href="<?= base_url('admin/accountMapping/account_mapping')?>">किसान खाता नक्शा</a></li>
 		</ul>
 	</li>
-
+<?php } ?>
 	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'invoice'){echo 'open';} ?>">
-		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">बिलिंग Bill Of Supply</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">बिल ऑॅफ सप्लाई</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
 			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'invoice'&& $uri3 == 'listing'){echo 'btn_active';} ?>" href="<?= base_url('admin/invoice/listing')?>">लिस्टिंग</a></li>
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'invoice'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/invoice/add')?>">जोड़ें</a></li>
@@ -181,13 +231,15 @@ if(!empty($_SESSION['user_type'])){
 
 	
 	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'taxinvoice'){echo 'open';} ?>">
-		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">Tax Invoice</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">टैक्स इनवॉइस</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
 		<ul class="dropdown-menu">
 			<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'taxinvoice'&& $uri3 == 'listing'){echo 'btn_active';} ?>" href="<?= base_url('admin/taxinvoice/listing')?>">लिस्टिंग</a></li>
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'taxinvoice'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/taxinvoice/add')?>">जोड़ें</a></li>
 		</ul>
 	</li>
 
+	
+	<?php if(get_logical_data()->status){?>
 	
 	<li class="nav-item dropdown  <?php if($uri1 == 'admin' && $uri2 == 'Kisanreg'){echo 'open';} ?>">
 		<a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-red-500 ti-files"></i> </span><span class="title">Farmer Reg</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
@@ -196,7 +248,7 @@ if(!empty($_SESSION['user_type'])){
 		<li><a class="sidebar-link <?php if($uri1 == 'admin' && $uri2 == 'Kisanreg'&& $uri3 == 'add'){echo 'btn_active';} ?>" href="<?= base_url('admin/Kisanreg/add')?>">जोड़ें</a></li>
 		</ul>
 	</li>
-	
+	<?php }?>
 </ul>
 <?php
 	}

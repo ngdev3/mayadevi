@@ -117,6 +117,7 @@ input[type=submit] {
                                            <div class="form-group col-md-7">
                                            <table class="table">
   <thead>
+  <?php if(get_logical_data()->status){?>
     <tr style="text-align:center">
       <th scope="col">Count</th>
       <th scope="col">Amount</th>
@@ -126,8 +127,10 @@ input[type=submit] {
       <th scope="col">UTR Count</th>
       <th scope="col">Current नाम</th>
     </tr>
+    <?php } ?>
   </thead>
   <tbody style="text-align:center">
+ 
     <tr>
       <th scope="row" id="mykisanvahicount"></th>
       <th scope="row" id="mykisanvahiamount"></th>
@@ -137,6 +140,7 @@ input[type=submit] {
       <th scope="row" id="kisanvahiUTRNoCount"></th>
       <th scope="row" id="kisanvahiUTRNaam"></th>
     </tr>
+   
   </tbody>
 </table>
                                            </div> 
@@ -174,10 +178,12 @@ input[type=submit] {
                                                 <th  class="table_bg" scope="row">नगद नाम</th>
                                                 <td id="expense_nagad" class="blackCSS textcenter hide"></td>
                                             </tr>
+                                            <?php if(get_logical_data()->status){?>
                                             <tr>
                                                 <th  class="table_bg" scope="row">किसान वही नाम</th>
                                                 <td id="expense_kisanvahi" class="blackCSS textcenter hide"></td>
                                             </tr>
+                                            <?php } ?>
                                             <tr onClick="myFunction_expenses()"  data-toggle="modal" data-target="#ExpensesmyModal">
                                                 <th  class="table_bg" scope="row">टोटल नाम</th>
                                                 <td id="expense" class="blackCSS textcenter hide"></td>
@@ -197,6 +203,7 @@ input[type=submit] {
                                                 <td id="MyFinalExpenses" class="blackCSS textcenter hide"></td>
 
                                             </tr>
+                                            <?php if(get_logical_data()->status){?>
                                             <tr onClick="myFunction()"  data-toggle="modal" data-target="#myModal">
                                                 <th class="table_bg" scope="row" >किसान संख्या</th>
                                               
@@ -218,6 +225,7 @@ input[type=submit] {
                                                 </td>
 
                                             </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
