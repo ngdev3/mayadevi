@@ -153,11 +153,11 @@ class Invoice_mod extends CI_Model {
         $last_id = $this->db->insert_id();
 
         $userdata['rokadh_jama_id'] = $res['deposit_data'];
-        $this->db->where('invoice_id',$last_id);
+        $this->db->where('bos_id',$last_id);
         $this->db->update('invoice_system',$userdata);
         
         $userdata['rokadh_nama_id'] = $res['expenses_data'];
-        $this->db->where('invoice_id',$last_id);
+        $this->db->where('bos_id',$last_id);
         $this->db->update('invoice_system',$userdata);
           return $last_id;			
       }
