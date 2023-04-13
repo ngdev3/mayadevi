@@ -294,12 +294,12 @@ class Invoice extends CI_Controller {
 				$nestedData     =   array();
                 $nestedData[]   =   $j;
                 
-                // $nestedData[]   =   '<a href="'.base_url().'admin/invoice/view/'.ID_encode($row['account_id']).'">'.$row['account_id'].'</a>';
-                $nestedData[]   =   $row["invoice_id"];
+                // $nestedData[]   =   
+                $nestedData[]   =   '<a href="'.base_url().'admin/invoice/GeneratePdf/'.ID_encode($row['invoice_id']).'">'.$row['invoice_id'].'</a>';
 				$nestedData[]   =   $row["FY"];
-				$nestedData[]   =   $row["updated_date"];
-				$nestedData[]   =   $row["account_id"];
-				$nestedData[]   =   $row["account_name"];
+				$nestedData[]   =   $row["billing_date"];
+				// $nestedData[]   =   ;
+				$nestedData[]   =   $row["account_name"].'_'.$row["account_id"];
 				$nestedData[]   =   $row["quantity"];
 				$nestedData[]   =   $row["total_invoice"];
 				if($row["type_of_invoice"] == 2) {$nestedData[]   =   'Bill Of Supply';}else{

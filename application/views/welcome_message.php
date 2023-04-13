@@ -71,7 +71,7 @@
 				<td align="right" style="font-size: 15px; font-weight:bold; border-bottom: 2px solid #000 !important;">FY:  <?php echo $invoice_data['FY']?></td>
 			</tr>
 			<tr>
-				<td align="left" style="font-size: 15px; font-weight:bold; ">Invoice Date: <?php $invoice_data_date =  strtotime($invoice_data['isupdated_date']); echo date('d-m-Y', $invoice_data_date); ?></td>
+				<td align="left" style="font-size: 15px; font-weight:bold; ">Invoice Date: <?php $invoice_data_date =  strtotime($invoice_data['billing_date']); echo date('d-m-Y', $invoice_data_date); ?></td>
 				<td align="right" style="font-size: 15px; font-weight:bold; ">Date of Supply: <?php echo date('d-m-Y', $invoice_data_date); ?></td>
 			</tr>
 			<tr>
@@ -378,7 +378,7 @@
 				<td align="right" style="font-size: 15px; font-weight:bold; border-bottom: 2px solid #000 !important;">FY:  <?php echo $invoice_data['FY']?></td>
 			</tr>
 			<tr>
-				<td align="left" style="font-size: 15px; font-weight:bold; ">Invoice Date: <?php $invoice_data_date =  strtotime($invoice_data['isupdated_date']); echo date('d-m-Y', $invoice_data_date); ?></td>
+				<td align="left" style="font-size: 15px; font-weight:bold; ">Invoice Date: <?php $invoice_data_date =  strtotime($invoice_data['billing_date']); echo date('d-m-Y', $invoice_data_date); ?></td>
 				<td align="right" style="font-size: 15px; font-weight:bold; ">Date of Supply: <?php echo date('d-m-Y', $invoice_data_date); ?></td>
 			</tr>
 			<tr>

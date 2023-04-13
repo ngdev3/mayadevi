@@ -43,8 +43,7 @@ $QUERY_STRING = $_SERVER['QUERY_STRING'];
                             <th>S.No.</th>
                             <th>Invoice Id</th>
                             <th>Finanical Year</th>
-                            <th>Date</th>
-                            <th>Account ID</th>
+                            <th>Billing Date</th>
                             <th>Account Name</th>
                             <th>Quantity</th>
                             <th>Amount</th>
@@ -111,8 +110,6 @@ $QUERY_STRING = $_SERVER['QUERY_STRING'];
                 "orderable": false
             }, {
                 "orderable": false
-            }, {
-                "orderable": false
             },
              {
                 "orderable": false
@@ -138,7 +135,6 @@ $QUERY_STRING = $_SERVER['QUERY_STRING'];
             {"targets": [5], "orderable": false, "searchable": false},
             {"targets": [6], "orderable": false, "searchable": false},
             {"targets": [7], "orderable": false, "searchable": false},
-            {"targets": [8], "orderable": false, "searchable": false},
         ],
         "ajax": {
             url: "<?php echo base_url(); ?>admin/invoice/view_all?<?php echo $QUERY_STRING; ?>", // json datasource
