@@ -2299,7 +2299,7 @@ if (!function_exists('generate_kyi_invoice_pdf_fy'))
 
 	// get currency in words also
 	
-	function getIndianCurrency(float $number)
+	function getIndianCurrency($number)
 {
     $decimal = round($number - ($no = floor($number)), 2) * 100;
     $hundred = null;
